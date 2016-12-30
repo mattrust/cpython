@@ -135,6 +135,9 @@ corresponding Unix manual entries for more information on calls.");
 #if defined(PYOS_OS2) && defined(PYCC_GCC) || defined(__VMS)
 /* Everything needed is defined in PC/os2emx/pyconfig.h or vms/pyconfig.h */
 #else                   /* all other compilers */
+#if defined(__AROS__)
+// FIXME
+#else
 /* Unix functions that the configure script doesn't check for */
 #define HAVE_EXECV      1
 #define HAVE_FORK       1
@@ -156,6 +159,7 @@ corresponding Unix manual entries for more information on calls.");
 #define HAVE_SYSTEM     1
 #define HAVE_WAIT       1
 #define HAVE_TTYNAME    1
+#endif  /* AROS */
 #endif  /* PYOS_OS2 && PYCC_GCC && __VMS */
 #endif  /* _MSC_VER */
 #endif  /* __BORLANDC__ */

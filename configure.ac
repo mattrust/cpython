@@ -326,6 +326,9 @@ then
 	*-*-cygwin*)
 		ac_sys_system=Cygwin
 		;;
+	*-*-aros*)
+		ac_sys_system=AROS
+		;;
 	*)
 		# for now, limit cross builds to known configurations
 		MACHDEP="unknown"
@@ -370,6 +373,9 @@ if test "$cross_compiling" = yes; then
 		esac
 		;;
 	*-*-cygwin*)
+		_host_cpu=
+		;;
+	*-*-aros*)
 		_host_cpu=
 		;;
 	*)
