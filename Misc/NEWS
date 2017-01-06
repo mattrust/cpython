@@ -12,8 +12,16 @@ Core and Builtins
 
 - Issue #28932: Do not include <sys/random.h> if it does not exist.
 
+Extension Modules
+-----------------
+
+- Issue #29169: Update zlib to 1.2.10.
+
 Library
 -------
+
+- Issue #29094: Offsets in a ZIP file created with extern file object and mode
+  "w" now are relative to the start of the file.
 
 - Issue #13051: Fixed recursion errors in large or resized
   curses.textpad.Textbox.  Based on patch by Tycho Andersen.
@@ -38,6 +46,12 @@ Library
 
 - Issue #28925: cPickle now correctly propagates errors when unpickle instances
   of old-style classes.
+
+Build
+-----
+
+- Issue #28768: Fix implicit declaration of function _setmode. Patch by
+  Masayuki Yamamoto
 
 
 What's New in Python 2.7.13
